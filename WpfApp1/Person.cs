@@ -11,7 +11,6 @@ public class Person : INotifyPropertyChanged
         get => _id;
         set
         {
-            if (value == null) throw new ArgumentNullException(nameof(Id));
             if (value == _id) return;
 
             _id = value;
@@ -19,8 +18,8 @@ public class Person : INotifyPropertyChanged
         }
     }
 
-    private string _first;
-    public string FirstName
+    private string? _first;
+    public string? FirstName
     {
         get => _first;
         set
@@ -33,8 +32,8 @@ public class Person : INotifyPropertyChanged
         }
     }
     
-    private string _last;
-    public string LastName
+    private string? _last;
+    public string? LastName
     {
         get => _last;
         set
@@ -53,7 +52,6 @@ public class Person : INotifyPropertyChanged
         get => _birth;
         set
         {
-            if (value == null) throw new ArgumentNullException(nameof(DateOfBirth));
             if (value == _birth) return;
 
             _birth = value;

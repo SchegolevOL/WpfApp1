@@ -7,12 +7,12 @@ namespace WpfApp1;
 
 public class DataBase
 {
-    private const string STR = @"Data Source=D:\Programming\Temp\persons.db;";
-    private SqliteConnection _db;
+    private const string Str = @"Data Source=D:\Programming\Temp\persons.db;";
+    private readonly SqliteConnection _db;
 
     public DataBase()
     {
-        _db = new SqliteConnection(STR);
+        _db = new SqliteConnection(Str);
     }
 
     public IEnumerable<Person> GetAllPersons()
